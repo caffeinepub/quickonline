@@ -1,0 +1,75 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-12T08:40:28.866Z",
+  "summary": "Landing page sections (Hero, Benefits, Pricing with 3 tiers, Testimonials, Contact with WA/tel + validated form, Footer) are implemented and composed in App.tsx with a white/blue/black premium Tailwind theme and generated images referenced from /assets/generated. However, some requirements/non-goals are violated: Footer copyright text doesn’t match the required “QuickOnline © 2026” string, additional unrequested authentication hooks/providers were added, pricing copy includes admin-panel/order-management features (explicitly non-goals), and additional dominant accent colors (green/yellow/red) are introduced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Footer includes exactly “QuickOnline © 2026” and a short tagline about helping local businesses grow online.",
+      "reason": "Footer currently renders a dynamic year and uses a different string order/format (“© {currentYear} QuickOnline. All rights reserved.”) instead of the required literal text “QuickOnline © 2026”. The tagline is present, but the copyright text does not meet the exact acceptance criteria.",
+      "evidence": [
+        "frontend/src/components/landing/Footer.tsx"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Avoid adding additional dominant accent colors beyond black/blue/white (minor neutrals like grays are acceptable).",
+      "reason": "UI introduces strong green (WhatsApp button), yellow (testimonial stars), and red (heart icon), which appear as additional accent colors beyond the requested palette.",
+      "evidence": [
+        "frontend/src/components/landing/ContactSection.tsx",
+        "frontend/src/components/landing/TestimonialsSection.tsx",
+        "frontend/src/components/landing/Footer.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity / authentication context and authenticated actor recreation logic added to the frontend.",
+      "reason": "BuildRequest explicitly lists authentication/user accounts as non-goals; diff adds Internet Identity hooks/provider and actor creation logic tied to identity.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Admin panel / order management / automation features promoted in the Pricing tier inclusions.",
+      "reason": "BuildRequest non-goals prohibit admin panel/CMS and e-commerce/order management; pricing content includes “Admin panel” and “Order/contact form” (and “WhatsApp automation”) as package features.",
+      "evidence": [
+        "frontend/src/components/landing/landingContent.ts"
+      ]
+    },
+    {
+      "description": "Caffeine.ai attribution/marketing link added in the footer.",
+      "reason": "Not requested by BuildRequest; footer acceptance criteria only mentions “QuickOnline © 2026” and a short tagline.",
+      "evidence": [
+        "frontend/src/components/landing/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/landing/BenefitsSection.tsx",
+    "frontend/src/components/landing/ContactForm.tsx",
+    "frontend/src/components/landing/ContactSection.tsx",
+    "frontend/src/components/landing/Footer.tsx",
+    "frontend/src/components/landing/HeroSection.tsx",
+    "frontend/src/components/landing/LandingSection.tsx",
+    "frontend/src/components/landing/PricingSection.tsx",
+    "frontend/src/components/landing/TestimonialsSection.tsx",
+    "frontend/src/components/landing/landingContent.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

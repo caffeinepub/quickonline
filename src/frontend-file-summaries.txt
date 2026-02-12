@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes all landing page sections in vertical flow (Hero, Benefits, Pricing, Testimonials, Contact, Footer) with white background.",
+  "frontend/src/components/landing/landingContent.ts": "Centralized content constants for all landing sections including hero copy, benefits list, pricing tiers (3 packages), testimonials (3 entries), trust badges, and contact information.",
+  "frontend/src/components/landing/HeroSection.tsx": "Hero section with logo header, headline, subheadline, prominent CTA button, trust points, and hero illustration image; includes smooth scroll to contact section.",
+  "frontend/src/components/landing/BenefitsSection.tsx": "Benefits section displaying 5 benefit cards in responsive grid with icons, titles, and descriptions using hover effects and blue accent colors.",
+  "frontend/src/components/landing/PricingSection.tsx": "Pricing section with 3 package cards (Basic, Standard, Premium) showing prices, features, and CTAs; Standard tier is highlighted as recommended.",
+  "frontend/src/components/landing/TestimonialsSection.tsx": "Testimonials section displaying 3 customer testimonial cards with quotes, ratings, names, business names, and locations.",
+  "frontend/src/components/landing/ContactSection.tsx": "Contact section with WhatsApp and Call action buttons plus embedded contact form; includes smooth scroll anchor and gray background.",
+  "frontend/src/components/landing/ContactForm.tsx": "Client-side validated contact form with name, phone, email, and message fields; shows inline validation errors and success confirmation state after submission.",
+  "frontend/src/components/landing/Footer.tsx": "Footer component with logo, tagline, copyright notice, and Caffeine.ai attribution link with UTM tracking parameters.",
+  "frontend/src/components/landing/LandingSection.tsx": "Reusable section wrapper component providing consistent padding, max-width container, optional title/subtitle heading, and customizable background classes.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining white background, blue primary accent (oklch(0.55 0.18 250)), black foreground, premium shadows, and bold typography with tight letter-spacing.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with blue/black color tokens, premium shadow utilities, Inter font family, and additional border radius variants (xl, 2xl)."
+}
