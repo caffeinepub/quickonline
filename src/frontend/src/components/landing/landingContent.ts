@@ -117,7 +117,7 @@ export const trustBadges = [
 ];
 
 export const contactInfo = {
-  whatsapp: "+919876543210",
-  phone: "+919876543210",
+  whatsapp: "+919113112297",
+  phone: "+919113112297",
   whatsappMessage: "Hi, I want to get a website for my shop"
 };

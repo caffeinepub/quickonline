@@ -1,15 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Create a clean, premium, single-page “QuickOnline” landing page that convinces shopkeepers to get a website.
+**Goal:** Update the landing page Contact section WhatsApp and Call actions to use phone number 9113112297.
 
 **Planned changes:**
-- Build a single-page layout with sections in order: Hero, Benefits, Pricing (3 packages), Testimonials, Contact (WhatsApp + Call + form), Footer.
-- Apply a cohesive premium theme: white background, blue/black accents, bold modern typography, subtle shadows, smooth subtle animations, and full mobile responsiveness.
-- Implement Hero copy with a prominent primary CTA and at least one trust element above the fold.
-- Implement Pricing with exactly 3 package cards (Basic, Standard, Premium), inclusions list, and a CTA per package (optionally highlight a recommended plan).
-- Implement Testimonials with at least 3 testimonial entries.
-- Implement Contact actions: WhatsApp link (wa.me), Call link (tel:), and a simple contact form with client-side validation and a clear success state (no backend).
-- Add generated brand visuals as static assets under `frontend/public/assets/generated` and place them in the hero/header and/or footer.
+- Update `contactInfo.whatsapp` and `contactInfo.phone` in `frontend/src/components/landing/landingContent.ts` to target `9113112297`.
+- Ensure the “WhatsApp Us” button opens a WhatsApp chat link to `9113112297` and the “Call Now” button uses a `tel:` link to `9113112297`.
 
-**User-visible outcome:** Visitors can scroll a premium QuickOnline landing page on mobile/desktop, review benefits/pricing/testimonials, and contact via WhatsApp, phone call, or submit a validated contact form with a visible confirmation.
+**User-visible outcome:** Visitors can click “WhatsApp Us” to start a chat with 9113112297 and click “Call Now” to call 9113112297.

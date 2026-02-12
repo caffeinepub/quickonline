@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Build a clean, premium, high-converting landing page website for QuickOnline (service helping local shopkeepers get professional websites), using a white background with blue/black startup-style design and core conversion sections (hero, benefits, pricing tiers, testimonials, contact, footer).",
   "architectural_notes": [
     "Single-page, landing-page-style site optimized for conversions (CTAs throughout).",
-    "Visual style: clean white base with blue/black accents, bold typography, soft shadows, smooth animations, mobile-first responsive layout."
+    "Visual style: clean white base with blue/black accents, bold typography, soft shadows, smooth animations, mobile-first responsive layout.",
+    "Contact CTAs (Call + Messages/WhatsApp) must target phone number 9113112297."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Minimal premium wordmark logo reading “QuickOnline” (quickonline-logo.dim_512x256.png)\n- Abstract, clean startup-style hero illustration with white background and blue/black accents (quickonline-hero-illustration.dim_1600x900.png)",
   "existing_features": [
     {
       "id": "feature-implement-a-single-page-high-converting-landing-page-for-quickonline-with-the-following-sections-in-order-hero-benefits-pricing-3-packages-testimonials-contact-whatsapp-call-buttons-simple-contact-form-and-footer",
@@ -65,12 +65,26 @@
         "REQ-7"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-section-whatsapp-and-call-actions-to-use-the-phone-number-9113112297",
+      "title": "Update the Contact section WhatsApp and Call actions to use the phone number 9113112297.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create QuickOnline premium landing page with hero, benefits, pricing (3 packages), testimonials, contact buttons/form, and footer; white background with blue/black accents, bold fonts, mobile-friendly, smooth animations; goal is to convert shopkeepers.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Set the Contact section Call (tel:) and Messages/WhatsApp links to use phone number 9113112297.",
       "reqIds": [],
       "status": "pending"
     }

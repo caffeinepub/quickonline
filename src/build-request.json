@@ -1,157 +1,45 @@
 {
   "kind": "build_request",
-  "title": "QuickOnline premium landing page (hero, benefits, pricing, testimonials, contact)",
+  "title": "Update contact WhatsApp and Call number to 9113112297",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Implement a single-page, high-converting landing page for “QuickOnline” with the following sections in order: Hero, Benefits, Pricing (3 packages), Testimonials, Contact (WhatsApp + Call buttons + simple contact form), and Footer.",
+      "id": "REQ-8",
+      "text": "Update the Contact section WhatsApp and Call actions to use the phone number 9113112297.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "recent-messages-1"
         ],
         "quotes": [
-          "Create a clean, premium landing page for QuickOnline with a hero section, benefits, pricing (3 packages), testimonials, contact buttons, and a footer."
+          "The call and messages should go on this number '9113112297'"
         ]
       },
       "acceptanceCriteria": [
-        "Landing page renders all required sections in a clear vertical flow on desktop and mobile",
-        "Pricing section shows exactly 3 packages/cards",
-        "Testimonials section displays at least 3 testimonial entries",
-        "Contact section includes WhatsApp button, Call button, and a form with at least Name + Phone/Email + Message fields",
-        "Footer includes “QuickOnline © 2026” and a short tagline about helping local businesses grow online"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Apply the requested visual design direction across the page: clean white background, blue/black accent palette, bold typography, soft shadows, smooth animations, premium startup/agency look (not childish), and fully mobile-responsive layout.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "White background, blue/black accents, bold fonts, startup style."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Primary background is white with black/blue accents used consistently for headings, buttons, highlights, and borders",
-        "Typography uses bold, modern headings and readable body text with consistent scale",
-        "Components (cards, sections, buttons) use subtle shadows and spacing to feel premium",
-        "All sections are responsive (no horizontal scroll, readable text, buttons usable on small screens)",
-        "Animations are subtle (e.g., hover/fade/slide) and do not block interaction"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Hero section content must clearly communicate the value proposition for shopkeepers and include a prominent primary CTA button designed to maximize conversions.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Goal: convince shopkeepers to get a website."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Hero contains a clear headline, short supporting copy, and a high-contrast primary CTA button above the fold on common screen sizes",
-        "Primary CTA is visually distinct and includes actionable wording (e.g., “Get Your Website Now”)",
-        "Hero includes at least one supporting trust element (e.g., micro-copy, badges, or short proof points) without adding new product features"
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Pricing section must present 3 packages (Basic, Standard, Premium) in a comparison-friendly layout with clear inclusions and a CTA per package.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "pricing (3 packages)"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Three pricing cards are displayed with package name, price, and bullet list of inclusions",
-        "Each package card includes a CTA button",
-        "The “recommended”/highlighted package (if used) is visually emphasized consistently with the blue/black accent scheme"
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Contact interactions must be functional: WhatsApp button opens a WhatsApp chat link and Call button uses a tel: link; the contact form must validate required fields client-side and provide a clear success state after submission (no backend required).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "contact buttons"
-        ]
-      },
-      "acceptanceCriteria": [
-        "WhatsApp button navigates to a wa.me (or equivalent) URL when clicked",
-        "Call button navigates to a tel: URL when clicked",
-        "Contact form blocks submission when required fields are empty and shows inline validation feedback",
-        "On successful submission, the UI shows a confirmation state/message and clears or preserves fields in a predictable way"
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Establish a coherent, creative visual theme (layout system, spacing, typography pairings, section styling, and button styles) that fits a premium startup agency aesthetic while keeping the requested white + blue/black palette (avoid adding additional dominant colors).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Clean, premium... startup style."
-        ]
-      },
-      "acceptanceCriteria": [
-        "All sections share consistent design tokens (spacing, border radius, shadows, button variants, and heading styles)",
-        "The theme feels cohesive across hero, cards, testimonials, and footer (no mixed styles)",
-        "No additional dominant accent colors are introduced beyond black/blue/white (minor neutrals like grays are acceptable)"
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Add generated brand visuals as static assets and use them on the landing page (do not serve images through the backend).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Generated images are placed in frontend/public/assets/generated and referenced directly by the frontend",
-        "Brand visuals appear in the header/hero and/or footer without breaking responsiveness"
+        "In frontend/src/components/landing/landingContent.ts, contactInfo.whatsapp and contactInfo.phone are updated so the WhatsApp and tel: links target 9113112297.",
+        "Clicking the \"WhatsApp Us\" button opens a WhatsApp chat link that targets 9113112297.",
+        "Clicking the \"Call Now\" button triggers a tel: link that targets 9113112297."
       ]
     }
   ],
   "constraints": [
-    "Frontend code must not modify files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT (compose them instead)",
-    "Backend must remain single-actor Motoko architecture; do not introduce additional backend services"
+    "Do not edit any files under frontend/src/components/ui or any path listed in frontend.immutablePaths.",
+    "Do not add any backend requirements; the contact actions remain frontend-only."
   ],
   "nonGoals": [
-    "Do not implement authentication or user accounts",
-    "Do not implement an admin panel or CMS",
-    "Do not implement e-commerce, payments, or order management",
-    "Do not integrate third-party auth providers or external databases"
+    "Changing any other landing page content, layout, styling, pricing, or copy.",
+    "Adding backend contact submission or storing contact form submissions."
   ],
   "imageRequirements": {
-    "required": [
-      "Minimal premium wordmark logo reading “QuickOnline” (quickonline-logo.dim_512x256.png)",
-      "Abstract, clean startup-style hero illustration with white background and blue/black accents (quickonline-hero-illustration.dim_1600x900.png)"
-    ],
+    "required": [],
     "edits": []
   },
   "userProfileUpdate": {
     "goalsToAdd": [],
     "goalsToRemove": [],
-    "preferencesToAdd": [],
+    "preferencesToAdd": [
+      "Use English for any user-facing text."
+    ],
     "preferencesToRemove": [],
     "miscToAdd": [],
     "miscToRemove": [],

@@ -2,56 +2,9 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-implement-a-single-page-high-converting-landing-page-for-quickonline-with-the-following-sections-in-order-hero-benefits-pricing-3-packages-testimonials-contact-whatsapp-call-buttons-simple-contact-form-and-footer",
-      "featureTitle": "Implement a single-page, high-converting landing page for “QuickOnline” with the following sections in order: Hero, Benefits, Pricing (3 packages), Testimonials, Contact (WhatsApp + Call buttons + simple contact form), and Footer.",
+      "featureId": "feature-update-the-contact-section-whatsapp-and-call-actions-to-use-the-phone-number-9113112297",
+      "featureTitle": "Update the Contact section WhatsApp and Call actions to use the phone number 9113112297.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/landing/BenefitsSection.tsx",
-        "frontend/src/components/landing/ContactSection.tsx",
-        "frontend/src/components/landing/Footer.tsx",
-        "frontend/src/components/landing/HeroSection.tsx",
-        "frontend/src/components/landing/PricingSection.tsx",
-        "frontend/src/components/landing/TestimonialsSection.tsx",
-        "frontend/src/components/landing/landingContent.ts",
-        "frontend/src/main.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-apply-the-requested-visual-design-direction-across-the-page-clean-white-background-blue-black-accent-palette-bold-typography-soft-shadows-smooth-animations-premium-startup-agency-look-not-childish-and-fully-mobile-responsive-layout",
-      "featureTitle": "Apply the requested visual design direction across the page: clean white background, blue/black accent palette, bold typography, soft shadows, smooth animations, premium startup/agency look (not childish), and fully mobile-responsive layout.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-hero-section-content-must-clearly-communicate-the-value-proposition-for-shopkeepers-and-include-a-prominent-primary-cta-button-designed-to-maximize-conversions",
-      "featureTitle": "Hero section content must clearly communicate the value proposition for shopkeepers and include a prominent primary CTA button designed to maximize conversions.",
-      "files": [
-        "frontend/src/components/landing/HeroSection.tsx",
         "frontend/src/components/landing/landingContent.ts"
       ],
       "components": [
@@ -62,84 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-pricing-section-must-present-3-packages-basic-standard-premium-in-a-comparison-friendly-layout-with-clear-inclusions-and-a-cta-per-package",
-      "featureTitle": "Pricing section must present 3 packages (Basic, Standard, Premium) in a comparison-friendly layout with clear inclusions and a CTA per package.",
-      "files": [
-        "frontend/src/components/landing/PricingSection.tsx",
-        "frontend/src/components/landing/landingContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-contact-interactions-must-be-functional-whatsapp-button-opens-a-whatsapp-chat-link-and-call-button-uses-a-tel-link-the-contact-form-must-validate-required-fields-client-side-and-provide-a-clear-success-state-after-submission-no-backend-required",
-      "featureTitle": "Contact interactions must be functional: WhatsApp button opens a WhatsApp chat link and Call button uses a tel: link; the contact form must validate required fields client-side and provide a clear success state after submission (no backend required).",
-      "files": [
-        "frontend/src/components/landing/ContactForm.tsx",
-        "frontend/src/components/landing/ContactSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-establish-a-coherent-creative-visual-theme-layout-system-spacing-typography-pairings-section-styling-and-button-styles-that-fits-a-premium-startup-agency-aesthetic-while-keeping-the-requested-white-blue-black-palette-avoid-adding-additional-dominant-colors",
-      "featureTitle": "Establish a coherent, creative visual theme (layout system, spacing, typography pairings, section styling, and button styles) that fits a premium startup agency aesthetic while keeping the requested white + blue/black palette (avoid adding additional dominant colors).",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/landing/LandingSection.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-generated-brand-visuals-as-static-assets-and-use-them-on-the-landing-page-do-not-serve-images-through-the-backend",
-      "featureTitle": "Add generated brand visuals as static assets and use them on the landing page (do not serve images through the backend).",
-      "files": [
-        "frontend/src/components/landing/Footer.tsx",
-        "frontend/src/components/landing/HeroSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
+        "REQ-8"
       ],
       "confidence": "high"
     }

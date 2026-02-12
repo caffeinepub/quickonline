@@ -1,211 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "QuickOnline premium single-page landing (hero, benefits, pricing, testimonials, contact)",
+  "title": "Update landing contact WhatsApp/Call number to 9113112297",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Build a single-page QuickOnline landing page with Hero, Benefits, Pricing (3 tiers), Testimonials, Contact (buttons + form), and Footer in the required order.",
+      "id": "REQ-8",
+      "summary": "Update the Contact section WhatsApp and Call actions to use the phone number 9113112297.",
       "acceptanceCriteria": [
-        "Landing page renders all required sections in a clear vertical flow on desktop and mobile",
-        "Pricing section shows exactly 3 packages/cards",
-        "Testimonials section displays at least 3 testimonial entries",
-        "Contact section includes WhatsApp button, Call button, and a form with at least Name + Phone/Email + Message fields",
-        "Footer includes “QuickOnline © 2026” and a short tagline about helping local businesses grow online"
+        "In frontend/src/components/landing/landingContent.ts, contactInfo.whatsapp and contactInfo.phone are updated so the WhatsApp and tel: links target 9113112297.",
+        "Clicking the \"WhatsApp Us\" button opens a WhatsApp chat link that targets 9113112297.",
+        "Clicking the \"Call Now\" button triggers a tel: link that targets 9113112297."
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "create",
-          "description": "Create the single-page landing composition that renders sections in order (Hero → Benefits → Pricing → Testimonials → Contact → Footer) and wires all section components together. Use shadcn-ui components (e.g., Button/Card) where appropriate for premium layout consistency; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/HeroSection.tsx",
-          "operation": "create",
-          "description": "Create the Hero section component and export it for use by App. Use shadcn-ui Button for the primary CTA; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/BenefitsSection.tsx",
-          "operation": "create",
-          "description": "Create the Benefits section component (premium card/grid layout). Use shadcn-ui Card for benefit items; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/PricingSection.tsx",
-          "operation": "create",
-          "description": "Create the Pricing section component that renders exactly 3 package cards with inclusions and per-package CTAs. Use shadcn-ui Card + Button to keep a consistent premium look; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/TestimonialsSection.tsx",
-          "operation": "create",
-          "description": "Create the Testimonials section component that renders at least 3 testimonial entries (cards/quotes). Use shadcn-ui Card for testimonial styling; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/ContactSection.tsx",
-          "operation": "create",
-          "description": "Create the Contact section container that includes WhatsApp + Call buttons and the embedded contact form area. Use shadcn-ui Button for action buttons; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/Footer.tsx",
-          "operation": "create",
-          "description": "Create the Footer component including “QuickOnline © 2026” and a short growth tagline, and ensure it’s used by App. Use shadcn-ui typography primitives if present (or consistent Tailwind classes); verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/landingContent.ts",
-          "operation": "create",
-          "description": "Add a small content/constants module for benefits, pricing tiers (3), and testimonials (>=3) so sections stay clean and consistent."
-        },
-        {
-          "path": "frontend/src/main.tsx",
-          "operation": "modify",
-          "description": "Ensure the app boots into the new App component and global styles import remains correct (App and index.css)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Apply a clean white + blue/black premium visual direction with bold typography, soft shadows, subtle animations, and full responsiveness.",
-      "acceptanceCriteria": [
-        "Primary background is white with black/blue accents used consistently for headings, buttons, highlights, and borders",
-        "Typography uses bold, modern headings and readable body text with consistent scale",
-        "Components (cards, sections, buttons) use subtle shadows and spacing to feel premium",
-        "All sections are responsive (no horizontal scroll, readable text, buttons usable on small screens)",
-        "Animations are subtle (e.g., hover/fade/slide) and do not block interaction"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "create",
-          "description": "Create global Tailwind entry styles (base/components/utilities) and define global design tokens via CSS variables for white background, blue/black accents, typography, radii, and shadow feel. Keep animations subtle and non-blocking."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Adjust Tailwind theme extensions (if needed) to support the premium spacing/typography/animation utilities used by the landing page while staying within the white + blue/black palette (neutrals allowed)."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Apply consistent responsive section spacing, max-width container usage, and subtle motion/hover states across sections. Use shadcn-ui layout-friendly components (e.g., Card) consistently; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Ensure the hero clearly communicates the value proposition for shopkeepers and includes a prominent high-conversion primary CTA above the fold plus a trust element.",
-      "acceptanceCriteria": [
-        "Hero contains a clear headline, short supporting copy, and a high-contrast primary CTA button above the fold on common screen sizes",
-        "Primary CTA is visually distinct and includes actionable wording (e.g., “Get Your Website Now”)",
-        "Hero includes at least one supporting trust element (e.g., micro-copy, badges, or short proof points) without adding new product features"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/landing/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Implement hero messaging aimed at shopkeepers (headline + support copy), a visually dominant primary CTA button, and a small trust element (e.g., short proof points/badges). Use shadcn-ui Button to ensure consistent premium CTA styling; verify the component's usage instructions before implementing."
-        },
         {
           "path": "frontend/src/components/landing/landingContent.ts",
           "operation": "modify",
-          "description": "Add/adjust hero copy, CTA label text, and trust micro-copy constants so the value proposition remains consistent across the page."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Implement pricing section with 3 packages (Basic/Standard/Premium) in a comparison-friendly layout with inclusions and a CTA per package, optionally highlighting a recommended tier.",
-      "acceptanceCriteria": [
-        "Three pricing cards are displayed with package name, price, and bullet list of inclusions",
-        "Each package card includes a CTA button",
-        "The “recommended”/highlighted package (if used) is visually emphasized consistently with the blue/black accent scheme"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/landing/PricingSection.tsx",
-          "operation": "modify",
-          "description": "Render exactly three pricing cards (Basic, Standard, Premium) with price + inclusions + CTA per card, using a comparison-friendly responsive grid. Use shadcn-ui Card/Button to maintain consistent premium styling; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/landingContent.ts",
-          "operation": "modify",
-          "description": "Define the three pricing tiers (names, prices, inclusions, recommended flag, CTA labels) as data consumed by the pricing section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Make contact interactions functional: WhatsApp (wa.me) and Call (tel:) links plus a client-validated form with a clear success state (no backend).",
-      "acceptanceCriteria": [
-        "WhatsApp button navigates to a wa.me (or equivalent) URL when clicked",
-        "Call button navigates to a tel: URL when clicked",
-        "Contact form blocks submission when required fields are empty and shows inline validation feedback",
-        "On successful submission, the UI shows a confirmation state/message and clears or preserves fields in a predictable way"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/landing/ContactSection.tsx",
-          "operation": "modify",
-          "description": "Wire WhatsApp and Call buttons to wa.me and tel: links and embed the contact form. Use shadcn-ui Button for consistent actions; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/landing/ContactForm.tsx",
-          "operation": "create",
-          "description": "Create a simple client-side validated form (Name + Phone/Email + Message required) with inline validation feedback and a deterministic success confirmation state after submission. Use shadcn-ui Input/Textarea/Label/Button components for consistent UX; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Establish a cohesive premium theme across layout, spacing, typography, section styling, and buttons using only white/blue/black (plus neutral grays).",
-      "acceptanceCriteria": [
-        "All sections share consistent design tokens (spacing, border radius, shadows, button variants, and heading styles)",
-        "The theme feels cohesive across hero, cards, testimonials, and footer (no mixed styles)",
-        "No additional dominant accent colors are introduced beyond black/blue/white (minor neutrals like grays are acceptable)"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Refine shared tokens (CSS variables for radii, shadows, foreground/background, primary accent blue) and base typography styles so all sections feel cohesive and premium."
-        },
-        {
-          "path": "frontend/src/components/landing/LandingSection.tsx",
-          "operation": "create",
-          "description": "Create a small reusable section wrapper (consistent padding, max-width, optional section heading/subheading styling) to standardize layout across the page. Use shadcn-ui class conventions if applicable; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Adopt the shared LandingSection wrapper (or equivalent) across all sections so spacing, headings, and visual rhythm are consistent from hero to footer."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Add generated brand visuals as static assets and use them in the landing page without backend image serving.",
-      "acceptanceCriteria": [
-        "Generated images are placed in frontend/public/assets/generated and referenced directly by the frontend",
-        "Brand visuals appear in the header/hero and/or footer without breaking responsiveness"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/quickonline-logo.dim_512x256.png",
-          "operation": "create",
-          "description": "Add the generated QuickOnline wordmark logo asset as a static file at the required path for direct frontend use."
-        },
-        {
-          "path": "frontend/public/assets/generated/quickonline-hero-illustration.dim_1600x900.png",
-          "operation": "create",
-          "description": "Add the generated hero illustration asset as a static file at the required path for direct frontend use."
-        },
-        {
-          "path": "frontend/src/components/landing/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Reference and render the static hero illustration (frontend/public/assets/generated/quickonline-hero-illustration.dim_1600x900.png) and logo (frontend/public/assets/generated/quickonline-logo.dim_512x256.png) in a responsive way within the hero/header area."
-        },
-        {
-          "path": "frontend/src/components/landing/Footer.tsx",
-          "operation": "modify",
-          "description": "Optionally reference the logo (frontend/public/assets/generated/quickonline-logo.dim_512x256.png) in the footer in a way that remains responsive and supports the premium look."
+          "description": "Update contactInfo.whatsapp and contactInfo.phone to use 9113112297 (keep existing formatting consistent with current values) so ContactSection's WhatsApp (wa.me) and Call (tel:) actions target the new number."
         }
       ]
     }

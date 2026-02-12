@@ -1,6 +1,6 @@
 {
   "frontend/src/App.tsx": "Main application component that composes all landing page sections in vertical flow (Hero, Benefits, Pricing, Testimonials, Contact, Footer) with white background.",
-  "frontend/src/components/landing/landingContent.ts": "Centralized content constants for all landing sections including hero copy, benefits list, pricing tiers (3 packages), testimonials (3 entries), trust badges, and contact information.",
+  "frontend/src/components/landing/landingContent.ts": "Centralized content constants for all landing sections including hero copy, benefits list, pricing tiers (3 packages), testimonials (3 entries), trust badges, and contact information with phone number 9113112297.",
   "frontend/src/components/landing/HeroSection.tsx": "Hero section with logo header, headline, subheadline, prominent CTA button, trust points, and hero illustration image; includes smooth scroll to contact section.",
   "frontend/src/components/landing/BenefitsSection.tsx": "Benefits section displaying 5 benefit cards in responsive grid with icons, titles, and descriptions using hover effects and blue accent colors.",
   "frontend/src/components/landing/PricingSection.tsx": "Pricing section with 3 package cards (Basic, Standard, Premium) showing prices, features, and CTAs; Standard tier is highlighted as recommended.",
